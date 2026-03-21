@@ -6,14 +6,23 @@
   html {
     @apply bg-bg-primary text-text-primary;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply font-sans antialiased;
+    overflow-x: hidden;
   }
 
   code,
   pre {
     @apply font-mono;
+  }
+
+  pre {
+    overflow-x: auto;
+    max-width: 100%;
+    word-break: break-all;
+    white-space: pre-wrap;
   }
 }
