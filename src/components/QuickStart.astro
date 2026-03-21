@@ -18,12 +18,19 @@
     <!-- OpenClaw tab -->
     <div id="panel-openclaw" class="tab-panel">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Config -->
+        <!-- Install + init -->
         <div class="bg-code-bg border border-border-subtle rounded-lg overflow-hidden">
           <div class="px-4 py-2 border-b border-border-subtle">
-            <span class="text-xs text-text-secondary font-mono">openclaw.json</span>
+            <span class="text-xs text-text-secondary font-mono">terminal</span>
           </div>
-          <pre class="p-4 text-sm leading-relaxed"><code class="text-text-primary">{"{"}<br/>  <span class="text-success">"plugins"</span>: {"{"}<br/>    <span class="text-success">"entries"</span>: {"{"}<br/>      <span class="text-success">"edicts"</span>: {"{"}<br/>        <span class="text-success">"enabled"</span>: <span class="text-accent">true</span><br/>      {"}"}<br/>    {"}"}<br/>  {"}"}<br/>{"}"}</code></pre>
+          <pre class="p-4 text-sm leading-relaxed"><code class="text-text-primary"><span class="text-text-secondary"># Install the plugin</span>
+<span class="text-accent">openclaw</span> plugins install openclaw-plugin-edicts
+
+<span class="text-text-secondary"># Bootstrap your edicts file</span>
+<span class="text-accent">edicts</span> init
+
+<span class="text-text-secondary"># Restart the gateway</span>
+<span class="text-accent">openclaw</span> gateway restart</code></pre>
         </div>
 
         <!-- YAML file -->
@@ -31,7 +38,14 @@
           <div class="px-4 py-2 border-b border-border-subtle">
             <span class="text-xs text-text-secondary font-mono">edicts.yaml</span>
           </div>
-          <pre class="p-4 text-sm leading-relaxed"><code class="text-text-primary"><span class="text-text-secondary">version:</span> 1<br/><span class="text-text-secondary">facts:</span><br/>  - <span class="text-text-secondary">text:</span> <span class="text-success">"v2.0 launches April 15"</span><br/>    <span class="text-text-secondary">category:</span> product<br/>    <span class="text-text-secondary">confidence:</span> verified<br/>  - <span class="text-text-secondary">text:</span> <span class="text-success">"Never mention Project X"</span><br/>    <span class="text-text-secondary">category:</span> compliance<br/>    <span class="text-text-secondary">confidence:</span> verified</code></pre>
+          <pre class="p-4 text-sm leading-relaxed"><code class="text-text-primary"><span class="text-text-secondary">version:</span> 1
+<span class="text-text-secondary">edicts:</span>
+  - <span class="text-text-secondary">text:</span> <span class="text-success">"v2.0 launches April 15"</span>
+    <span class="text-text-secondary">category:</span> product
+    <span class="text-text-secondary">confidence:</span> verified
+  - <span class="text-text-secondary">text:</span> <span class="text-success">"Never mention Project X"</span>
+    <span class="text-text-secondary">category:</span> compliance
+    <span class="text-text-secondary">confidence:</span> verified</code></pre>
         </div>
       </div>
       <p class="text-text-secondary text-sm text-center mt-4">

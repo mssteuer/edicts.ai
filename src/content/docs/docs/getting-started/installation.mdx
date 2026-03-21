@@ -97,24 +97,16 @@ You should see your edicts listed:
 
 ## Using with OpenClaw
 
-If you're using [OpenClaw](https://openclaw.ai), install the plugin:
+If you're using [OpenClaw](https://openclaw.ai), install the plugin with one command:
 
 ```bash
-npm install openclaw-plugin-edicts
+openclaw plugins install openclaw-plugin-edicts
 ```
 
-Then add it to your `openclaw.json`:
+This installs the plugin and adds it to your `openclaw.json` automatically. Then restart the gateway:
 
-```json
-{
-  "plugins": {
-    "entries": {
-      "edicts": {
-        "enabled": true
-      }
-    }
-  }
-}
+```bash
+openclaw gateway restart
 ```
 
 Every agent session will automatically receive your edicts as ground truth — no code changes needed.
