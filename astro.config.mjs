@@ -11,7 +11,7 @@ export default defineConfig({
       title: 'Edicts',
       description: 'Ground truth layer for AI agents',
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/mssteuer/edicts' },
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/edicts-ai/edicts' },
       ],
       customCss: ['./src/styles/starlight.css'],
       sidebar: [

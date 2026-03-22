@@ -1,6 +1,6 @@
 # edicts.ai
 
-Marketing site and documentation for [Edicts](https://github.com/mssteuer/edicts) — ground truth for AI agents.
+Marketing site and documentation for [Edicts](https://github.com/edicts-ai/edicts) — ground truth for AI agents.
 
 **Live:** [edicts.ai](https://edicts.ai)
 
@@ -26,8 +26,8 @@ Deployed to GitHub Pages via GitHub Actions with custom domain `edicts.ai`. Push
 
 ## Related repos
 
-- [edicts](https://github.com/mssteuer/edicts) — Core library (standalone TypeScript, framework-agnostic)
-- [openclaw-plugin-edicts](https://github.com/mssteuer/openclaw-plugin-edicts) — OpenClaw plugin adapter
+- [edicts](https://github.com/edicts-ai/edicts) — Core library (standalone TypeScript, framework-agnostic)
+- [openclaw-plugin-edicts](https://github.com/edicts-ai/openclaw-plugin-edicts) — OpenClaw plugin adapter
 
 ## License
 
