@@ -76,10 +76,12 @@
 <span class="text-accent">const</span> store = <span class="text-accent">new</span> EdictStore({"{"}<br/>  path: <span class="text-success">'./edicts.yaml'</span><br/>{"}"});
 <span class="text-accent">await</span> store.load();
 
-<span class="text-accent">const</span> rendered = store.render();
-<span class="text-text-secondary">// ## Edicts</span>
-<span class="text-text-secondary">// - **[product]** v2.0 launches April 15</span>
-<span class="text-text-secondary">// - **[compliance]** Never mention Project X</span></code></pre>
+<span class="text-accent">const</span> edicts = <span class="text-accent">await</span> store.all();
+<span class="text-accent">const</span> rules = edicts.map(e =&gt;
+  <span class="text-success">`- [$&#123;e.category&#125;] $&#123;e.text&#125;`</span>
+).join(<span class="text-success">'\n'</span>);
+<span class="text-text-secondary">// - [product] v2.0 launches April 15</span>
+<span class="text-text-secondary">// - [compliance] Never mention Project X</span></code></pre>
         </div>
       </div>
     </div>

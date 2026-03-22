@@ -2,7 +2,7 @@
 
 Marketing site and documentation for [Edicts](https://github.com/mssteuer/edicts) — ground truth for AI agents.
 
-**Live:** [mssteuer.github.io/edicts.ai](https://mssteuer.github.io/edicts.ai/)
+**Live:** [edicts.ai](https://edicts.ai)
 
 ## What's here
 
@@ -22,9 +22,7 @@ npm run preview   # Preview production build
 
 ## Deployment
 
-Deployed to GitHub Pages via GitHub Actions. Push to `main` triggers a build and deploy.
-
-Base path: `/edicts.ai/` (configured in `astro.config.mjs`).
+Deployed to GitHub Pages via GitHub Actions with custom domain `edicts.ai`. Push to `main` triggers a build and deploy.
 
 ## Related repos
 
