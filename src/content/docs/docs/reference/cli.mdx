@@ -177,9 +177,30 @@ The CLI also currently ships these commands:
 - `update <id>`
 - `search <query>`
 - `review [--stale-days N] [--include-permanent] [--json]`
+- `compact <id>... --text TEXT [--tags TAGS] [--confidence CONF] [--ttl TTL] [--source SRC] [--dry-run]`
 - `export [--format json|yaml] [--output FILE]`
 - `import <file> [--merge|--replace]`
 - `init [--path FILE]`
+
+## Compacting duplicate edicts
+
+When the same fact has been recorded in multiple edicts, `compact` merges them into a single replacement — preserving history and keeping your store lean.
+
+```bash
+# Preview what would be merged (no writes)
+edicts compact 12 15 --text "API rate limit is 1000 req/min per tenant" --dry-run
+
+# Merge edicts 12 and 15 into one
+edicts compact 12 15 --text "API rate limit is 1000 req/min per tenant" \
+  --category limits \
+  --confidence verified
+```
+
+**Rules:**
+- All source edicts must belong to the same category
+- At least 2 source IDs are required
+- Source edicts are removed after the merged edict is created
+- `--dry-run` shows the operation plan without modifying the store
 
 ## Not yet fully covered in this CLI guide
 
@@ -192,6 +213,7 @@ For deeper workflows such as:
 - deletion via `remove`
 - text lookup with `search`
 - hygiene checks with `review`
+- compaction with `compact`
 - migration flows with `export` / `import`
 
 refer to the [API Reference](/docs/reference/api/), which documents the underlying behaviors in more detail.
